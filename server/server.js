@@ -26,13 +26,12 @@ export const io = new Server(server, {
     cors: {
         origin: [
             "http://localhost:5173",
-            // "https://chat-app-eight-tau-61.vercel.app",
-            // "https://chat-app-rho-bice.vercel.app",
-           " https://messagee-omega.vercel.app",        ],
+            "https://messagee-omega.vercel.app",
+        ],
         credentials: true,
+        methods: ["GET", "POST"],
     },
 });
-
 // Store online users
 export const userSocketMap = {}; // { userId: socketId }
 
@@ -61,18 +60,17 @@ app.use(express.json({ limit: "4mb" }));
 app.use((req, res, next) => {
     res.setHeader(
         "Content-Security-Policy",
-        "default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' http://localhost:5173 https://chat-app-eight-tau-61.vercel.app"
+        "default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' http://localhost:5173 https://messagee-omega.vercel.app"
     );
     next();
 }); app.use(
     cors({
         origin: [
             "http://localhost:5173",
-            // "https://chat-app-eight-tau-61.vercel.app",
-            // "https://chat-app-rho-bice.vercel.app",
             "https://messagee-omega.vercel.app",
         ],
         credentials: true,
+        methods: ["GET", "POST", "PUT", "DELETE"],
     })
 );
 // Test route
