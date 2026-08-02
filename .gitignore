@@ -1,0 +1,19 @@
+# dependencies
+node_modules
+
+
+# logs
+logs
+*.log
+npm-debug.log*
+
+# uploads (if storing locally)
+uploads/
+
+# editor
+.vscode
+.idea
+
+# OS files
+.DS_Store
+Thumbs.db
