@@ -26,10 +26,9 @@ export const io = new Server(server, {
     cors: {
         origin: [
             "http://localhost:5173",
-            "https://chat-app-eight-tau-61.vercel.app",
-            "https://chat-app-rho-bice.vercel.app",
-            "https://messagee-11srnrl9f-project-b788.vercel.app",
-        ],
+            // "https://chat-app-eight-tau-61.vercel.app",
+            // "https://chat-app-rho-bice.vercel.app",
+           " https://messagee-omega.vercel.app",        ],
         credentials: true,
     },
 });
@@ -69,9 +68,9 @@ app.use((req, res, next) => {
     cors({
         origin: [
             "http://localhost:5173",
-            "https://chat-app-eight-tau-61.vercel.app",
-            "https://chat-app-rho-bice.vercel.app",
-            "https://messagee-11srnrl9f-project-b788.vercel.app",
+            // "https://chat-app-eight-tau-61.vercel.app",
+            // "https://chat-app-rho-bice.vercel.app",
+            "https://messagee-omega.vercel.app",
         ],
         credentials: true,
     })
