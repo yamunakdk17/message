@@ -1,19 +1,8 @@
 {
-  "headers": [
+  "rewrites": [
     {
       "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src-elem 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' http://localhost:5173 http://localhost:5000 https://chat-app-rho-bice.vercel.app https://chat-app-eight-tau-61.vercel.app https://message-ez6n.onrender.com"
-        }
-      ]
+      "destination": "/index.html"
     }
-  ],
-  "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/index.html"
-        }
-    ]
+  ]
 }
