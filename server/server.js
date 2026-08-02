@@ -27,10 +27,11 @@ export const io = new Server(server, {
         origin: [
             "http://localhost:5173",
             "https://chat-app-eight-tau-61.vercel.app",
-            "https://chat-app-rho-bice.vercel.app"
+            "https://chat-app-rho-bice.vercel.app",
+            "https://messagee-11srnrl9f-project-b788.vercel.app",
         ],
         credentials: true,
-    }
+    },
 });
 
 // Store online users
@@ -64,13 +65,13 @@ app.use((req, res, next) => {
         "default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' http://localhost:5173 https://chat-app-eight-tau-61.vercel.app"
     );
     next();
-});
-app.use(
+}); app.use(
     cors({
-        origin:[
+        origin: [
             "http://localhost:5173",
             "https://chat-app-eight-tau-61.vercel.app",
-            "https://chat-app-rho-bice.vercel.app"
+            "https://chat-app-rho-bice.vercel.app",
+            "https://messagee-11srnrl9f-project-b788.vercel.app",
         ],
         credentials: true,
     })
